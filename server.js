@@ -7,13 +7,14 @@ require('dotenv').config();
 require('./config/database');
 
 const userRouter = require('./routes/users');
+const indexRouter = require('./routes/index');
 const cors = require('cors')
 
 
 app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
-
+app.use('/', indexRouter);
 app.use('/api/users', userRouter);
 
 app.listen(port, ()=> {

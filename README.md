@@ -1,6 +1,6 @@
 # Zodiac App
 
-
+____ is an app that gives user access to their astrological zodiac information, as well as daily/monthly horoscopes. ____ also has an enabled feature that gives the use the opportunity to keep a journal of their day to compare their horoscopes to their everyday lives.
 
 ## Screenshots
 
