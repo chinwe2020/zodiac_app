@@ -4,6 +4,19 @@ ____ is an app that gives user access to their astrological zodiac information, 
 
 ## Screenshots
 
+![Home Page](./public/images/home.png)
+
+![Sign Up Page](./public/images/signup.png)
+
+![Log In Page](./public/images/login.png)
+
+![Profile Page (Top)](./public/images/top.png)
+
+![Profile Page (Bottom)](./public/images/bottom.png)
+
+![Add Journal Page](./public/images/add.png)
+
+![Edit Journal Page](./public/images/home.png)
 
 ## Technologies
 
@@ -16,17 +29,18 @@ ____ is an app that gives user access to their astrological zodiac information, 
 - Mongoose
 - React.js
 
-
 ## Getting Started
 
 - Project Planning
 https://trello.com/b/y2irDyfM/zodiac-app
 
 - Deploy Project
-
+https://horoscope-journal.herokuapp.com/
 
 ## Next Steps
 
+- display horoscopes w/ get daily horoscopes button
+- debug profile info section
 - email daily horoscopes
 
 
