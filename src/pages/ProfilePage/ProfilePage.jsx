@@ -40,6 +40,7 @@ class ProfilePage extends Component {
                     </div>
                     <div className="horoscope">
                         <h2>Horoscope</h2>
+                        <a class=" deep purple lighten- 1waves-effect waves-light btn-large"><i class="material-icons left">brightness_7</i>Get Today's Horoscope</a>
                         {/* {this.props.user.signs === this.props.horoscopes.sign.name ? 
                         <div className="horoscope-display">{this.props.horoscopes.result.description}</div>
                         :
