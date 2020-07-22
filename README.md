@@ -43,4 +43,8 @@ https://horoscope-journal.herokuapp.com/
 - debug profile info section
 - email daily horoscopes
 
+## Sources(credits)
+
+- https://www.astrology-zodiac-signs.com/zodiac-sign
+
 
