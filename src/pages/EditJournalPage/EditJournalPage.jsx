@@ -42,7 +42,7 @@ class EditJournalPage extends Component{
                             to={{
                                 pathname: '/profile'
                             }}
-                        ><i class="material-icons left">undo</i>
+                        ><i className="material-icons left">undo</i>
                         Cancel
                         </Link>           
                 </form> 

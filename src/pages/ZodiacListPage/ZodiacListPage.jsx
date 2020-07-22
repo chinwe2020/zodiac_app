@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './ZodiacListPage.css';
-import * as zodiacAPI from '../../services/zodiac-api'
 import ZodiacCard from '../../components/ZodiacCard/ZodiacCard';
 import userService from '../../services/userService';
 

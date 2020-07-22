@@ -3,7 +3,7 @@ const BASE_URL = '/api/horoscopes'
 
 export function getAllHoroscopes() {
     return fetch(`${BASE_URL}`, {
-        headers: {'Authorization': 'Bearer ' + tokenService.getToken()}
+        headers: {'content-type': 'application/json', 'Authorization': 'Bearer ' + tokenService.getToken()}
     })
     .then(res => res.json());
 }

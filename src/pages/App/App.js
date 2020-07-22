@@ -64,11 +64,12 @@ class App extends Component {
   
   async componentDidMount() {
     const signs = await zodiacAPI.getAllSigns();
-    console.log(signs, "signs")
     const journals = await journalAPI.getAllJournals();
+    console.log(journals, "journals")
     const horoscopes = await horoscopeAPI.getAllHoroscopes();
     this.setState({signs})
     this.setState({journals})
+    
     this.setState({horoscopes})
   }
 
@@ -97,6 +98,7 @@ class App extends Component {
              handleAddSign={this.handleAddSign}
               user={this.state.user}
               signs={this.state.signs}
+              journals={this.state.journals}
           />
         }>
           </Route>
@@ -105,6 +107,7 @@ class App extends Component {
             user={this.state.user}
             signs={this.state.signs}
             journals={this.state.journals}
+            horoscopes={this.state.horoscopes}
             handleDeleteJournal={this.handleDeleteJournal}
           />
           }>

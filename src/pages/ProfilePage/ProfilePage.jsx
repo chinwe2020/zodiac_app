@@ -1,48 +1,50 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './ProfilePage.css';
-import * as zodiacAPI from '../../services/zodiac-api';
-import * as journalAPI from '../../services/journal-api';
-import * as horoscopeAPI from '../../services/horoscope-api';
 import JournalCard from '../../components/JournalCard/JournalCard';
 import { Link } from 'react-router-dom';
-import { Component } from 'react';
+import userService from '../../services/userService';
 
+class ProfilePage extends Component {
+    constructor(props) {
+        super(props)
+    }
+    render() {
+        let div = []
+            console.log(this.props, "props")
+        for(let i = 0; i < this.props.signs.length; i++){                      
+            if(this.props.user.signs[0] === this.props.signs[i].sunSign) {
 
-class ProfilePage extends Component{
-    // state = {
-    //     sign: '',
-    //     horoscopes: [],
-    //     journals: []
-    // }
-    async componentDidMount() {
-        // const signs = await zodiacAPI.getAllSigns();
-        // const journals = await journalAPI.getAllJournals();
-        // const horoscopes = await horoscopeAPI.getAllHoroscopes();
-        // this.setState({journals})
-        // this.setState({signs})
-        // this.setState({horoscopes})
-      }
-
-    render(){
+                div.push(<div className="info" key={this.props.signs[i]._id}>
+                    <div>image:{this.props.signs.image}</div>
+                    <div>sign: {this.props.signs.sunSign}
+                    <div>Birthdates:{this.props.signs.dates}</div>
+                    <div>Element:{this.props.signs.element}</div>
+                    <div>Planet:{this.props.signs.planet}</div>
+                    <div>Strengths:{this.props.signs.strengths}</div>
+                    <div>Weaknesses:{this.props.signs.weaknesses}</div>
+                    <div>Likes:{this.props.signs.likes}</div>
+                    <div>Dislikes:{this.props.signs.dislikes}</div>
+                    <div>Compatibility:{this.props.signs.compatiblity}</div>
+                    <div>Lucky Numbers:{this.props.signs.luckyNumbers}</div>
+                </div>
+                </div>)
+        }
+        }
+        console.log(div)
         return(
             <>
                 <div className="profilePage">
-                    <div className="sign">
-                        <div className="zodiac-sign">Zodiac Sign</div>
-                        <div>image</div>
-                        <div>Birthdates:</div>
-                        <div>Element:</div>
-                        <div>Planet:</div>
-                        <div>Strenghts:</div>
-                        <div>Weaknesses:</div>
-                        <div>Likes:</div>
-                        <div>Dislikes:</div>
-                        <div>Compatibility:</div>
-                        <div>Lucky Numbers:</div>
+                <div className="sign">
+                    <div className="zodiac-sign">{this.props.user.signs}</div>
+                      {div.map((sign, i) => <div key= {i}>{sign}</div>)}
                     </div>
                     <div className="horoscope">
                         <h2>Horoscope</h2>
-                        <div className="horoscope-display">Daily Horoscope Display</div>
+                        {/* {this.props.user.signs === this.props.horoscopes.sign.name ? 
+                        <div className="horoscope-display">{this.props.horoscopes.result.description}</div>
+                        :
+                        <div></div>
+                        } */}
                     </div>
                     <div className="journal">
                         <h3>Journal</h3>
@@ -66,8 +68,9 @@ class ProfilePage extends Component{
                     </div>
                 </div>
             </>
-        )
+        )        
     }
 }
+
 
 export default ProfilePage;
