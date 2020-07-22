@@ -1,0 +1,26 @@
+.journalcard {
+    padding: 20px;
+    height: 325px;
+    width: 600px
+}
+
+.journalcard-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 27px;
+}
+
+p{
+    font-size: 20px;
+    height: 130px;
+}
+
+
+.journalcard-action{
+    display: flex;
+    justify-content: space-between;
+   
+
+}
+

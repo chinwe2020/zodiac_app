@@ -1,0 +1,6 @@
+/* You have to override some CSS properties: */
+
+nav {
+    height: 60px;
+    line-height: 60px;
+}

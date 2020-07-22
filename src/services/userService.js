@@ -41,9 +41,20 @@ function login(creds) {
   .then(({token}) => tokenService.setToken(token));
 }
 
+function updateUser(formData){
+  console.log(formData);
+  return fetch(BASE_URL + formData.user._id, {
+    method: 'PUT',
+    headers:{'Authorization': 'Bearer ' + tokenService.getToken(), 'Content-Type': 'application/json'},
+    body: JSON.stringify(formData)
+  })
+  .then (res => res.json())
+}
+
 export default {
   signup,
   getUser,
   logout,
-  login
+  login,
+  updateUser
 };

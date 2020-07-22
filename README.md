@@ -25,6 +25,8 @@ https://trello.com/b/y2irDyfM/zodiac-app
 - Deploy Project
 
 
-## Future Enhancements
+## Next Steps
+
+- email daily horoscopes
 
 

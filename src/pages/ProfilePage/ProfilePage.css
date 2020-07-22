@@ -1,0 +1,90 @@
+.profilePage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.zodiac-sign{
+    font-size: 60px;
+    color: rgb(223, 76, 223);
+    font-weight: 800;
+}
+
+image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign{
+    font-size: 30px;
+    color: white;
+}
+
+h2{
+    color: #4dd0e1 ;
+    font-weight: 800;
+}
+
+.horoscope{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.horoscope-display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 800px;
+    border: 5px solid white;
+}
+
+h3{
+   
+    color: rgb(223, 76, 223);
+    font-weight: 800;
+}
+
+.journal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.journal-display {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    justify-items: center;
+  }
+
+.browser-default{
+    color: black
+}
+
+@media (max-width: 1500px) {
+.journal-display {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    justify-items: center;
+    }
+}
+
+@media (max-width: 1000px) {
+.journal-display {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    justify-items: center;
+    }
+}

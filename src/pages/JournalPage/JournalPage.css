@@ -1,0 +1,16 @@
+.journalPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    color: white;
+}
+
+#entry{
+    font-size: 30px;
+    height: 400px;
+    background-color: white;
+}
+

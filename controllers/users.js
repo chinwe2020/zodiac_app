@@ -5,9 +5,18 @@ const SECRET = process.env.SECRET;
 
 module.exports = {
   signup,
-  login
+  login,
+  updateUser
 };
 
+function updateUser(req, res){
+  console.log(req.body, "msg");
+  // req.body.user = req.user._id;
+  console.log(req.body, "body")
+  console.log(req.user, "user")
+  User.findByIdAndUpdate({"_id":req.user._id}, req.body, {upsert: true, new: true})
+  .then((user) => {if (user) {res.json(user)} else {res.json({message: 'there is no user'})}})
+}
 
 async function signup(req, res) {
   const user = new User(req.body);
